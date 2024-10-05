@@ -10,9 +10,9 @@ import {
   WiFi,
 } from '../components';
 
-export class ShellyPlusUNI extends Device {
+export class ShellyPlusUni extends Device {
   static readonly model: string = 'SNSN-0043X';
-  static readonly modelName: string = 'Shelly Plus UNI';
+  static readonly modelName: string = 'Shelly Plus Uni';
 
   @component
   readonly wifi = new WiFi(this);
@@ -39,7 +39,10 @@ export class ShellyPlusUNI extends Device {
   readonly switch0 = new Switch(this, 0);
 
   @component
+  readonly switch1 = new Switch(this, 1);
+
+  @component
   readonly script = new Script(this);
 }
 
-Device.registerClass(ShellyPlusUNI);
+Device.registerClass(ShellyPlusUni);
